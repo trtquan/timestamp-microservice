@@ -30,6 +30,7 @@ app.get("api/timestamp/:date_string", (req,res) => {
   const {date_string} = req.params;
   const date = new Date(date_string)
   const isValidDate = checkValidDate(date);
+  console.log(date);
   if(isValidDate) {
     res.json({
       "unix": date.getTime(),
