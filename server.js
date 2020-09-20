@@ -5,7 +5,7 @@
 var express = require('express');
 var app = express();
 const checkValidDate = (date) => {
-  return date instanceof Date && !isNaN(d);
+  return date instanceof Date && !isNaN(date);
 }
 // enable CORS (https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 // so that your API is remotely testable by FCC 
