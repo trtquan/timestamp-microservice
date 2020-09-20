@@ -42,8 +42,8 @@ app.get("/api/timestamp/:date_string", (req, res) => {
   if (parseInt(date_string) > 10000) {
     unixTime = new Date(parseInt(date_string));
     res.json({
-      unix: date.getTime(),
-      utc: date.toUTCString(),
+      unix: unixTime.getTime(),
+      utc: unixTime.toUTCString(),
     });
   }
 
@@ -55,7 +55,7 @@ app.get("/api/timestamp/:date_string", (req, res) => {
   } else {
     res.json({ error: "Invalid Date" });
   }
-  
+
 });
 
 // listen for requests :)
