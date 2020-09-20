@@ -26,6 +26,7 @@ app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
+
 app.get("/api/timestamp/:date_string", (req,res) => {
   const {date_string} = req.params;
   if(!date_string) {
@@ -38,8 +39,8 @@ app.get("/api/timestamp/:date_string", (req,res) => {
   const date = new Date(date_string)
   console.log(date);
   const isValidDate = checkValidDate(date);
-  if(parseInt(≈) > 10000) {
-    unixTime = new Date(parseInt(date))
+  if(parseInt(date_string) > 10000) {
+    unixTime = new Date(parseInt(date_string))
     res.json({
       "unix": date.getTime(),
       "utc": date.toUTCString()
